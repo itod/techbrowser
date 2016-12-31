@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TBRootURLString</key>
+	<string>http://m.gawker.com/</string>
+	<key>TBRootURLPatternStrings</key>
+	<array>
+		<string>http*://m.gawker.com/</string>
+		<string>http*://m.gawker.com/popular</string>
+		<string>about:blank</string>
+	</array>
+</dict>
+</plist>

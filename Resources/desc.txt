@@ -1,0 +1,10 @@
+TechBrowser is a simple app dedicated to providing the best mobile browsing experience for the greatest tech news site on the web: Techmeme (www.techmeme.com).
+
+Recently, the fine folks at Techmeme launched a wonderful iPhone-optimized version of the site (at www.techmeme.com/m). However, viewing the site in the iPhone's Mobile Safari browser can sometimes be a little jarring. Each story linked from the Techmeme site opens a new Safari page/tab. The Safari animations and transitions when opening and closing pages/tabs are really slick, but unfortunately they slow the news-reading experience. If you love Techmeme like I do, then you are probably a news junkie who needs his tech news *fast*. As fast as possible.
+
+With TechBrowser, there's no fiddling with opening/closing Safari pages/tabs. TechBrowser's UI flow/animations are simple and fast. And TechBrowser allows you to always return to the Techmeme.com homepage quickly, and much more easily than in Mobile Safari.
+
+Also, TechBrowser always displays a fullscreen view of Techmeme.com immediately on launch. Again, no waiting for Safari's page animations to get you back to the Techmeme homepage in some buried page/tab. And no Safari location bar animations to interfere with viewing the Techmeme homepage in fullscreen.
+
+Finally, TechBrowser includes a small amount of Twitter integration. When viewing a linked story, click the "Action" button in the top right corner for an option to "Tweet Link". If you have Tweetie installed, clicking the "Tweet Link" button will launch a composition window in Tweetie that is pre-populated with the link. If you don't have Tweetie installed, you are taken to the Twitter website in Mobile Safari.
+
