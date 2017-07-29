@@ -54,6 +54,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // use standard swipe-from-edge recognizer instead.
+    {
+        NSAssert(self.navigationController.interactivePopGestureRecognizer, @"");
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
+    
     [self setUpBigSpinner];
     [self setUpNavBar];
 
@@ -181,9 +189,10 @@
     TDBrowserViewController *bvc = [[[TDBrowserViewController alloc] init] autorelease];
     bvc.delegate = self;
     
-    UISwipeGestureRecognizer *gr = [[[UISwipeGestureRecognizer alloc] initWithTarget:bvc action:@selector(dismiss:)] autorelease];
-    gr.direction = UISwipeGestureRecognizerDirectionRight;
-    [bvc.view addGestureRecognizer:gr];
+    // don't use custom gesture recognizer…
+//    UISwipeGestureRecognizer *gr = [[[UISwipeGestureRecognizer alloc] initWithTarget:bvc action:@selector(dismiss:)] autorelease];
+//    gr.direction = UISwipeGestureRecognizerDirectionRight;
+//    [bvc.view addGestureRecognizer:gr];
     
     [self.navigationController pushViewController:bvc animated:YES];
     [bvc loadRequest:req];
