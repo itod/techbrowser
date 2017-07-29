@@ -45,10 +45,6 @@
 		D34359AB152570C000F9E581 /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDCE10B915BD007E6BBA /* arrow-left.png */; };
 		D34359AC152570C000F9E581 /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AFDDCF10B915BD007E6BBA /* arrow-right.png */; };
 		D34359AD152570C000F9E581 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D3BE51BB13A9B4B100CD53E5 /* iTunesArtwork.png */; };
-		D34359AE152570C000F9E581 /* button_UINavigationBarDefaultBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973E91524E93300C67B01 /* button_UINavigationBarDefaultBack.png */; };
-		D34359AF152570C000F9E581 /* button_UINavigationBarDefaultBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EA1524E93300C67B01 /* button_UINavigationBarDefaultBack@2x.png */; };
-		D34359B0152570C000F9E581 /* button_UINavigationBarDefaultBackPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EB1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed.png */; };
-		D34359B1152570C000F9E581 /* button_UINavigationBarDefaultBackPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EC1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed@2x.png */; };
 		D34359D31525746600F9E581 /* BrowserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34359CB1525746600F9E581 /* BrowserView.xib */; };
 		D34359D41525746600F9E581 /* BrowserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34359CB1525746600F9E581 /* BrowserView.xib */; };
 		D34359D51525746600F9E581 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D34359CD1525746600F9E581 /* InfoPlist.strings */; };
@@ -57,10 +53,6 @@
 		D34359D81525746600F9E581 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34359CF1525746600F9E581 /* MainWindow.xib */; };
 		D34359D91525746600F9E581 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34359D11525746600F9E581 /* RootView.xib */; };
 		D34359DA1525746600F9E581 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34359D11525746600F9E581 /* RootView.xib */; };
-		D35973ED1524E93300C67B01 /* button_UINavigationBarDefaultBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973E91524E93300C67B01 /* button_UINavigationBarDefaultBack.png */; };
-		D35973EE1524E93300C67B01 /* button_UINavigationBarDefaultBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EA1524E93300C67B01 /* button_UINavigationBarDefaultBack@2x.png */; };
-		D35973EF1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EB1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed.png */; };
-		D35973F01524E93300C67B01 /* button_UINavigationBarDefaultBackPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D35973EC1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed@2x.png */; };
 		D35973F11524F6C200C67B01 /* TDBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AA2E7510BA3C3400C2DC50 /* TDBackButton.m */; };
 		D35973F31525124100C67B01 /* DefaultValues-TechBrowser.plist in Resources */ = {isa = PBXBuildFile; fileRef = D35973F21525124100C67B01 /* DefaultValues-TechBrowser.plist */; };
 		D35973FF15252A9F00C67B01 /* TBUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D35973FE15252A9F00C67B01 /* TBUserDefaults.m */; };
@@ -364,6 +356,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 9867TNT66D;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TechBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -401,10 +398,6 @@
 				D3BE51BA13A9187500CD53E5 /* Icon-Large.png in Resources */,
 				D3BE51BC13A9B4B100CD53E5 /* iTunesArtwork.png in Resources */,
 				D3A4BFF013ACFC7C0064D56A /* arrow.png in Resources */,
-				D35973ED1524E93300C67B01 /* button_UINavigationBarDefaultBack.png in Resources */,
-				D35973EE1524E93300C67B01 /* button_UINavigationBarDefaultBack@2x.png in Resources */,
-				D35973EF1524E93300C67B01 /* button_UINavigationBarDefaultBackPressed.png in Resources */,
-				D35973F01524E93300C67B01 /* button_UINavigationBarDefaultBackPressed@2x.png in Resources */,
 				D35973F31525124100C67B01 /* DefaultValues-TechBrowser.plist in Resources */,
 				D34359D31525746600F9E581 /* BrowserView.xib in Resources */,
 				D34359D51525746600F9E581 /* InfoPlist.strings in Resources */,
@@ -432,10 +425,6 @@
 				D34359AB152570C000F9E581 /* arrow-left.png in Resources */,
 				D34359AC152570C000F9E581 /* arrow-right.png in Resources */,
 				D34359AD152570C000F9E581 /* iTunesArtwork.png in Resources */,
-				D34359AE152570C000F9E581 /* button_UINavigationBarDefaultBack.png in Resources */,
-				D34359AF152570C000F9E581 /* button_UINavigationBarDefaultBack@2x.png in Resources */,
-				D34359B0152570C000F9E581 /* button_UINavigationBarDefaultBackPressed.png in Resources */,
-				D34359B1152570C000F9E581 /* button_UINavigationBarDefaultBackPressed@2x.png in Resources */,
 				D34359D41525746600F9E581 /* BrowserView.xib in Resources */,
 				D34359D61525746600F9E581 /* InfoPlist.strings in Resources */,
 				D34359D81525746600F9E581 /* MainWindow.xib in Resources */,
@@ -534,6 +523,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 9867TNT66D;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -554,6 +544,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 9867TNT66D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/TechBrowser_Prefix.pch;
 				INFOPLIST_FILE = "TechBrowser-Info.plist";
@@ -657,6 +648,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 9867TNT66D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/TechBrowser_Prefix.pch;
 				INFOPLIST_FILE = "TechBrowser-Info.plist";
