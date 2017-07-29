@@ -47,12 +47,6 @@
 - (IBAction)reload:(id)sender;
 - (IBAction)action:(id)sender;
 
-- (IBAction)gotoSafari:(id)sender;
-- (IBAction)mailURL:(id)sender;
-- (IBAction)tweetURL:(id)sender;
-- (IBAction)copyURL:(id)sender;
-- (IBAction)sendToInstapaper:(id)sender;
-
 - (void)loadURL:(NSURL *)URL;
 - (void)loadRequest:(NSURLRequest *)req;
 

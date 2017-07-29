@@ -11,7 +11,6 @@
 #import "TDBackButton.h"
 #import "TDUtils.h"
 #import "TDHintView.h"
-#import "TJReadLater.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #define INDEX_GOTO_SAFARI 0
@@ -37,12 +36,6 @@
 - (void)showActivityStarted;
 - (void)showActivityStopped;
 - (BOOL)isWebViewDoneLoading;
-
-- (void)displayMailComposer;
-- (void)launchMailApp;
-- (void)fireRequest:(NSString *)s;
-- (void)doSendToInstapaper;
-- (CGRect)hintViewRectForBounds:(CGRect)bounds;
 
 @property (nonatomic, retain) NSArray *idleToolbarItems;
 @property (nonatomic, retain) NSArray *busyToolbarItems;
@@ -170,147 +163,27 @@
 
 
 - (IBAction)action:(id)sender {
-    UIActionSheet *sheet = nil;
-//    if ([TJInstapaper isLoggedIn]) {
-        sheet = [[[UIActionSheet alloc] initWithTitle:nil
-                                             delegate:self
-                                    cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
-                               destructiveButtonTitle:nil
-                                    otherButtonTitles:NSLocalizedString(@"Open in Safari", @""),
-                  NSLocalizedString(@"Copy Link", @""),
-                  NSLocalizedString(@"Email Link", @""),
-                  NSLocalizedString(@"Tweet Link", @""),
-                  NSLocalizedString(@"Send to Instapaper", @""),
-                  nil] autorelease];
-//    } else {
-//        sheet = [[[UIActionSheet alloc] initWithTitle:nil
-//                                             delegate:self
-//                                    cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
-//                               destructiveButtonTitle:nil
-//                                    otherButtonTitles:NSLocalizedString(@"Open in Safari", @""),
-//                  NSLocalizedString(@"Copy Link", @""),
-//                  NSLocalizedString(@"Email Link", @""),
-//                  NSLocalizedString(@"Tweet Link", @""),
-//                  nil] autorelease];
-//    }
-    
-    [sheet showInView:self.view];
-}
+    if (!currentURL) return;
 
-
-- (IBAction)gotoSafari:(id)sender {
-    NSURL *url = currentURL;
-    if (url) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
-}
-
-
-- (IBAction)mailURL:(id)sender {
-    if (!currentURL) {
-        return;
-    }
-    
-    if ([MFMailComposeViewController canSendMail]) {
-        [self displayMailComposer];
-    } else {
-        [self launchMailApp];
-    }
-}
-
-
-- (IBAction)tweetURL:(id)sender {
-    if (!currentURL) {
-        return;
-    }
-    
-    // try tweetie
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tweetie:%@", [currentURL absoluteString]]];
-    
-    // fallback to twitter mobile web
-    if (![[UIApplication sharedApplication] canOpenURL:url]) {
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/home?status=%@", [currentURL absoluteString]]];
-    }
-    
-    [[UIApplication sharedApplication] openURL:url];
-}
-
-
-- (IBAction)sendToInstapaper:(id)sender {
-    if (!currentURL) {
-        return;
-    }
-    
-    if ([TJInstapaper isLoggedIn]) {
-        [self doSendToInstapaper];
-    } else {
-        [self authorizeInstapaper];
-    }
-    
-}
-
-
-- (void)doSendToInstapaper {
-    TDAssertMainThread();
-    
-    NSString *title = titleLabel.text;
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    
-    [TJInstapaper saveURL:[currentURL absoluteString] title:title callback:^(BOOL success) {
-        TDAssertMainThread();
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        
-        CGRect bounds = self.view.bounds;
-        CGRect r = [self hintViewRectForBounds:bounds];
-        TDHintView *hv = [[[TDHintView alloc] initWithFrame:r] autorelease];
-        
-        NSString *txt = nil;
-        if (success) {
-            txt = NSLocalizedString(@"Sent to Instapaper.", @"");
+    NSArray *items = @[currentURL];
+    UIActivityViewController *avc = [[[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil] autorelease];
+    avc.modalPresentationStyle = UIModalPresentationPopover;
+    avc.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *err) {
+        // react to the completion
+        if (completed) {
+            // user shared an item
+            NSLog(@"We used activity type %@", activityType);
         } else {
-            txt = NSLocalizedString(@"Could not send to Instapaper.", @"");
+            // user cancelled
+            NSLog(@"We didn't want to share anything after all.");
         }
-        hv.hintText = txt;
-        hv.alpha = 0.0;
-        [self.view addSubview:hv];
-        [UIView animateWithDuration:0.5 animations:^{
-            hv.alpha = 1.0;
-        }];
         
-        TDPerformOnMainThreadAfterDelay(2.0, ^{
-            [UIView animateWithDuration:0.5 animations:^{
-                hv.alpha = 0.0;
-            } completion:^(BOOL finished) {
-                [hv removeFromSuperview];
-            }];
-        });
-    }];
-}
+        if (err) {
+            NSLog(@"An Error occured: %@, %@", err.localizedDescription, err.localizedFailureReason);
+        }
+    };
 
-
-- (void)authorizeInstapaper {
-    UIViewController *avc = [TJInstapaper authorizationViewController];
     [self presentViewController:avc animated:YES completion:nil];
-}
-
-
-
-- (CGRect)hintViewRectForBounds:(CGRect)bounds {
-    CGFloat w = bounds.size.width * 0.75;
-
-    CGFloat x = CGRectGetMidX(bounds) - w / 2.0;
-    CGFloat y = 0.0;
-    CGFloat h = HINT_VIEW_HEIGHT;
-
-    CGRect r = CGRectMake(x, y, w, h);
-    return r;
-}
-
-
-- (IBAction)copyURL:(id)sender {
-    if (currentURL) {
-        [[UIPasteboard generalPasteboard] setValue:currentURL forPasteboardType:@"public.url"]; //(id)kUTTypeURL];
-    }
 }
 
 
@@ -326,35 +199,6 @@
     if ([self isViewLoaded]) {
         NSAssert(webView, @"");
         [webView loadRequest:req];
-    }
-}
-
-
-#pragma mark -
-#pragma mark UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)sheet clickedButtonAtIndex:(NSInteger)i {
-    if (sheet.cancelButtonIndex == i) return;
-    
-    switch (i) {
-        case INDEX_GOTO_SAFARI:
-            [self gotoSafari:nil];
-            break;
-        case INDEX_COPY_URL:
-            [self copyURL:nil];
-            break;
-        case INDEX_MAIL_URL:
-            [self mailURL:nil];
-            break;
-        case INDEX_TWEET_URL:
-            [self tweetURL:nil];
-            break;
-        case INDEX_INSTAPAPER:
-            [self sendToInstapaper:nil];
-            break;
-        default:
-            NSAssert1(0, @"unknown action sheet index: %ld", (long)i);
-            break;
     }
 }
 
@@ -388,14 +232,6 @@
     NSString *email = [[NSString stringWithFormat:@"%@%@", recipients, body] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
-}
-
-
-- (void)fireRequest:(NSString *)s {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:s]];
-    [NSURLConnection sendSynchronousRequest:req returningResponse:nil error:nil];
-    [pool release];
 }
 
 

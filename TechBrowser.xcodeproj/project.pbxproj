@@ -64,28 +64,6 @@
 		D35973F11524F6C200C67B01 /* TDBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AA2E7510BA3C3400C2DC50 /* TDBackButton.m */; };
 		D35973F31525124100C67B01 /* DefaultValues-TechBrowser.plist in Resources */ = {isa = PBXBuildFile; fileRef = D35973F21525124100C67B01 /* DefaultValues-TechBrowser.plist */; };
 		D35973FF15252A9F00C67B01 /* TBUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D35973FE15252A9F00C67B01 /* TBUserDefaults.m */; };
-		D372A7F01658302A005C2FED /* TJReadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7D31658302A005C2FED /* TJReadingService.m */; };
-		D372A7F11658302A005C2FED /* TJReadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7D31658302A005C2FED /* TJReadingService.m */; };
-		D372A7F21658302A005C2FED /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7D61658302A005C2FED /* NSData+Base64.m */; };
-		D372A7F31658302A005C2FED /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7D61658302A005C2FED /* NSData+Base64.m */; };
-		D372A7F61658302A005C2FED /* TJDelicious.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DA1658302A005C2FED /* TJDelicious.m */; };
-		D372A7F71658302A005C2FED /* TJDelicious.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DA1658302A005C2FED /* TJDelicious.m */; };
-		D372A7F81658302A005C2FED /* TJInstapaper.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DC1658302A005C2FED /* TJInstapaper.m */; };
-		D372A7F91658302A005C2FED /* TJInstapaper.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DC1658302A005C2FED /* TJInstapaper.m */; };
-		D372A7FA1658302A005C2FED /* TJKippt.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DE1658302A005C2FED /* TJKippt.m */; };
-		D372A7FB1658302A005C2FED /* TJKippt.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7DE1658302A005C2FED /* TJKippt.m */; };
-		D372A7FC1658302A005C2FED /* TJPinboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E01658302A005C2FED /* TJPinboard.m */; };
-		D372A7FD1658302A005C2FED /* TJPinboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E01658302A005C2FED /* TJPinboard.m */; };
-		D372A7FE1658302A005C2FED /* TJPocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E21658302A005C2FED /* TJPocket.m */; };
-		D372A7FF1658302A005C2FED /* TJPocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E21658302A005C2FED /* TJPocket.m */; };
-		D372A8001658302A005C2FED /* TJReadability.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E41658302A005C2FED /* TJReadability.m */; };
-		D372A8011658302A005C2FED /* TJReadability.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E41658302A005C2FED /* TJReadability.m */; };
-		D372A8021658302A005C2FED /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E81658302A005C2FED /* Base64Transcoder.c */; };
-		D372A8031658302A005C2FED /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = D372A7E81658302A005C2FED /* Base64Transcoder.c */; };
-		D372A8041658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7EB1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m */; };
-		D372A8051658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7EB1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m */; };
-		D372A8061658302A005C2FED /* TJReadingServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7EF1658302A005C2FED /* TJReadingServiceViewController.m */; };
-		D372A8071658302A005C2FED /* TJReadingServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A7EF1658302A005C2FED /* TJReadingServiceViewController.m */; };
 		D372A80B165830E2005C2FED /* TDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A80A165830E2005C2FED /* TDUtils.m */; };
 		D372A80C165830E2005C2FED /* TDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A80A165830E2005C2FED /* TDUtils.m */; };
 		D372A83516586231005C2FED /* TDHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A83416586231005C2FED /* TDHintView.m */; };
@@ -143,31 +121,6 @@
 		D35973F21525124100C67B01 /* DefaultValues-TechBrowser.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DefaultValues-TechBrowser.plist"; path = "Resources/DefaultValues-TechBrowser.plist"; sourceTree = "<group>"; };
 		D35973FD15252A9F00C67B01 /* TBUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBUserDefaults.h; sourceTree = "<group>"; };
 		D35973FE15252A9F00C67B01 /* TBUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBUserDefaults.m; sourceTree = "<group>"; };
-		D372A7D21658302A005C2FED /* TJReadingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJReadingService.h; sourceTree = "<group>"; };
-		D372A7D31658302A005C2FED /* TJReadingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJReadingService.m; sourceTree = "<group>"; };
-		D372A7D51658302A005C2FED /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		D372A7D61658302A005C2FED /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		D372A7D91658302A005C2FED /* TJDelicious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJDelicious.h; sourceTree = "<group>"; };
-		D372A7DA1658302A005C2FED /* TJDelicious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJDelicious.m; sourceTree = "<group>"; };
-		D372A7DB1658302A005C2FED /* TJInstapaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJInstapaper.h; sourceTree = "<group>"; };
-		D372A7DC1658302A005C2FED /* TJInstapaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJInstapaper.m; sourceTree = "<group>"; };
-		D372A7DD1658302A005C2FED /* TJKippt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKippt.h; sourceTree = "<group>"; };
-		D372A7DE1658302A005C2FED /* TJKippt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKippt.m; sourceTree = "<group>"; };
-		D372A7DF1658302A005C2FED /* TJPinboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPinboard.h; sourceTree = "<group>"; };
-		D372A7E01658302A005C2FED /* TJPinboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPinboard.m; sourceTree = "<group>"; };
-		D372A7E11658302A005C2FED /* TJPocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPocket.h; sourceTree = "<group>"; };
-		D372A7E21658302A005C2FED /* TJPocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPocket.m; sourceTree = "<group>"; };
-		D372A7E31658302A005C2FED /* TJReadability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJReadability.h; sourceTree = "<group>"; };
-		D372A7E41658302A005C2FED /* TJReadability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJReadability.m; sourceTree = "<group>"; };
-		D372A7E51658302A005C2FED /* TJReadLater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJReadLater.h; sourceTree = "<group>"; };
-		D372A7E61658302A005C2FED /* TJReadLaterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJReadLaterConfig.h; sourceTree = "<group>"; };
-		D372A7E81658302A005C2FED /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		D372A7E91658302A005C2FED /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		D372A7EA1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
-		D372A7EB1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
-		D372A7EC1658302A005C2FED /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
-		D372A7EE1658302A005C2FED /* TJReadingServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJReadingServiceViewController.h; sourceTree = "<group>"; };
-		D372A7EF1658302A005C2FED /* TJReadingServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJReadingServiceViewController.m; sourceTree = "<group>"; };
 		D372A80916583099005C2FED /* TDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDUtils.h; sourceTree = "<group>"; };
 		D372A80A165830E2005C2FED /* TDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDUtils.m; sourceTree = "<group>"; };
 		D372A83316586231005C2FED /* TDHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHintView.h; sourceTree = "<group>"; };
@@ -246,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				D3AFDCBF10B8F5BE007E6BBA /* Source */,
-				D372A7D01658302A005C2FED /* TJReadLater */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* TechBrowser */,
 				D343598715256FD300F9E581 /* SnarkBrowsa */,
@@ -301,78 +253,6 @@
 				D343598D15256FD300F9E581 /* main.m */,
 			);
 			path = SnarkBrowsa;
-			sourceTree = "<group>";
-		};
-		D372A7D01658302A005C2FED /* TJReadLater */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7D11658302A005C2FED /* Abstract */,
-				D372A7D41658302A005C2FED /* Categories */,
-				D372A7D81658302A005C2FED /* Services */,
-				D372A7E51658302A005C2FED /* TJReadLater.h */,
-				D372A7E61658302A005C2FED /* TJReadLaterConfig.h */,
-				D372A7E71658302A005C2FED /* Vendor */,
-				D372A7ED1658302A005C2FED /* View Controllers */,
-			);
-			path = TJReadLater;
-			sourceTree = "<group>";
-		};
-		D372A7D11658302A005C2FED /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7D21658302A005C2FED /* TJReadingService.h */,
-				D372A7D31658302A005C2FED /* TJReadingService.m */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		D372A7D41658302A005C2FED /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7D51658302A005C2FED /* NSData+Base64.h */,
-				D372A7D61658302A005C2FED /* NSData+Base64.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		D372A7D81658302A005C2FED /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7D91658302A005C2FED /* TJDelicious.h */,
-				D372A7DA1658302A005C2FED /* TJDelicious.m */,
-				D372A7DB1658302A005C2FED /* TJInstapaper.h */,
-				D372A7DC1658302A005C2FED /* TJInstapaper.m */,
-				D372A7DD1658302A005C2FED /* TJKippt.h */,
-				D372A7DE1658302A005C2FED /* TJKippt.m */,
-				D372A7DF1658302A005C2FED /* TJPinboard.h */,
-				D372A7E01658302A005C2FED /* TJPinboard.m */,
-				D372A7E11658302A005C2FED /* TJPocket.h */,
-				D372A7E21658302A005C2FED /* TJPocket.m */,
-				D372A7E31658302A005C2FED /* TJReadability.h */,
-				D372A7E41658302A005C2FED /* TJReadability.m */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		D372A7E71658302A005C2FED /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7E81658302A005C2FED /* Base64Transcoder.c */,
-				D372A7E91658302A005C2FED /* Base64Transcoder.h */,
-				D372A7EA1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.h */,
-				D372A7EB1658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m */,
-				D372A7EC1658302A005C2FED /* OASignatureProviding.h */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		D372A7ED1658302A005C2FED /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D372A7EE1658302A005C2FED /* TJReadingServiceViewController.h */,
-				D372A7EF1658302A005C2FED /* TJReadingServiceViewController.m */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		D3AFDCBF10B8F5BE007E6BBA /* Source */ = {
@@ -583,17 +463,6 @@
 				D319FA4415256E9A00112E7C /* FUWildcardPattern.m in Sources */,
 				D309EC2C16177FD500F6AA75 /* TBRootNavigationController.m in Sources */,
 				D375B5D417F4B6AC0046FAAD /* TDBrowserNavBar.m in Sources */,
-				D372A7F01658302A005C2FED /* TJReadingService.m in Sources */,
-				D372A7F21658302A005C2FED /* NSData+Base64.m in Sources */,
-				D372A7F61658302A005C2FED /* TJDelicious.m in Sources */,
-				D372A7F81658302A005C2FED /* TJInstapaper.m in Sources */,
-				D372A7FA1658302A005C2FED /* TJKippt.m in Sources */,
-				D372A7FC1658302A005C2FED /* TJPinboard.m in Sources */,
-				D372A7FE1658302A005C2FED /* TJPocket.m in Sources */,
-				D372A8001658302A005C2FED /* TJReadability.m in Sources */,
-				D372A8021658302A005C2FED /* Base64Transcoder.c in Sources */,
-				D372A8041658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				D372A8061658302A005C2FED /* TJReadingServiceViewController.m in Sources */,
 				D372A80B165830E2005C2FED /* TDUtils.m in Sources */,
 				D372A83516586231005C2FED /* TDHintView.m in Sources */,
 			);
@@ -614,17 +483,6 @@
 				D343599E1525701100F9E581 /* TDBackButton.m in Sources */,
 				D309EC2D16177FD500F6AA75 /* TBRootNavigationController.m in Sources */,
 				D375B5D517F4B8DC0046FAAD /* TDBrowserNavBar.m in Sources */,
-				D372A7F11658302A005C2FED /* TJReadingService.m in Sources */,
-				D372A7F31658302A005C2FED /* NSData+Base64.m in Sources */,
-				D372A7F71658302A005C2FED /* TJDelicious.m in Sources */,
-				D372A7F91658302A005C2FED /* TJInstapaper.m in Sources */,
-				D372A7FB1658302A005C2FED /* TJKippt.m in Sources */,
-				D372A7FD1658302A005C2FED /* TJPinboard.m in Sources */,
-				D372A7FF1658302A005C2FED /* TJPocket.m in Sources */,
-				D372A8011658302A005C2FED /* TJReadability.m in Sources */,
-				D372A8031658302A005C2FED /* Base64Transcoder.c in Sources */,
-				D372A8051658302A005C2FED /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				D372A8071658302A005C2FED /* TJReadingServiceViewController.m in Sources */,
 				D372A80C165830E2005C2FED /* TDUtils.m in Sources */,
 				D372A83616586231005C2FED /* TDHintView.m in Sources */,
 			);
