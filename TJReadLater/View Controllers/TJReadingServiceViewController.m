@@ -100,8 +100,9 @@
 					_usernameField = [[UITextField alloc] init];
 					
 					CGFloat padding = 10.0f;
-					CGFloat labelWidth = [[_readingService loginLabel] sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]].width;
-					[_usernameField setFrame:CGRectMake(2.0f * padding + labelWidth, 0.0f, [cell contentView].bounds.size.width - 3.0 * padding - labelWidth, [cell contentView].bounds.size.height)];
+                    //CGFloat labelWidth = [[_readingService loginLabel] sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]].width;
+                    CGFloat labelWidth = [[_readingService loginLabel] sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:14.0f]}].width;
+                    [_usernameField setFrame:CGRectMake(2.0f * padding + labelWidth, 0.0f, [cell contentView].bounds.size.width - 3.0 * padding - labelWidth, [cell contentView].bounds.size.height)];
 					[_usernameField setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 					[_usernameField setReturnKeyType:UIReturnKeyNext];
 					[_usernameField setDelegate:self];
@@ -125,7 +126,8 @@
 				_passwordField = [[UITextField alloc] init];
 				
 				CGFloat padding = 10.0f;
-				CGFloat labelWidth = [@"Password" sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]].width;
+                //CGFloat labelWidth = [@"Password" sizeWithFont:[UIFont boldSystemFontOfSize:14.0f]].width;
+                CGFloat labelWidth = [@"Password" sizeWithAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:14.0f]}].width;
 				[_passwordField setFrame:CGRectMake(2.0f * padding + labelWidth, 0.0f, [cell contentView].bounds.size.width - 3.0f * padding - labelWidth, [cell contentView].bounds.size.height)];
 				[_passwordField setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 				[_passwordField setReturnKeyType:UIReturnKeyGo];
