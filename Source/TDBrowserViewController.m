@@ -168,20 +168,20 @@
     NSArray *items = @[currentURL];
     UIActivityViewController *avc = [[[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil] autorelease];
     avc.modalPresentationStyle = UIModalPresentationPopover;
-    avc.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *err) {
-        // react to the completion
-        if (completed) {
-            // user shared an item
-            NSLog(@"We used activity type %@", activityType);
-        } else {
-            // user cancelled
-            NSLog(@"We didn't want to share anything after all.");
-        }
-        
-        if (err) {
-            NSLog(@"An Error occured: %@, %@", err.localizedDescription, err.localizedFailureReason);
-        }
-    };
+//    avc.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *err) {
+//        // react to the completion
+//        if (completed) {
+//            // user shared an item
+//            NSLog(@"We used activity type %@", activityType);
+//        } else {
+//            // user cancelled
+//            NSLog(@"We didn't want to share anything after all.");
+//        }
+//        
+//        if (err) {
+//            NSLog(@"An Error occured: %@, %@", err.localizedDescription, err.localizedFailureReason);
+//        }
+//    };
 
     [self presentViewController:avc animated:YES completion:nil];
 }
