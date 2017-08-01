@@ -204,47 +204,6 @@
 
 
 #pragma mark -
-#pragma mark Mail
-
-- (void)displayMailComposer {
-    MFMailComposeViewController *picker = [[[MFMailComposeViewController alloc] init] autorelease];
-    picker.mailComposeDelegate = self;
-    
-    NSString *emailBody = [currentURL absoluteString];
-    if ([emailBody length]) {
-        [picker setMessageBody:emailBody isHTML:NO];
-    }
-    
-    [self presentViewController:picker animated:YES completion:nil];
-    //[self presentModalViewController:picker animated:YES];
-}
-
-
-- (void)launchMailApp {
-    NSString *recipients = @"mailto:first@example.com";
-    NSString *body = @"";
-    
-    NSString *s = [currentURL absoluteString];
-    if ([s length]) {
-        body = [NSString stringWithFormat:@"?body=%@", s];
-    }
-    
-    NSString *email = [[NSString stringWithFormat:@"%@%@", recipients, body] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
-}
-
-
-#pragma mark -
-#pragma mark MFMailComposeViewControllerDelegate
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    //[self dismissModalViewControllerAnimated:YES];
-}
-
-
-#pragma mark -
 #pragma mark UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)wv shouldStartLoadWithRequest:(NSURLRequest *)req navigationType:(UIWebViewNavigationType)type {
