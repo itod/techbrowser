@@ -311,7 +311,7 @@
         toolbarHeight = LANDSCAPE_NAVBAR_HEIGHT;
     }
 
-    CGRect toolbarFrame = CGRectMake(0, appFrame.size.height - toolbarHeight, appFrame.size.width, toolbarHeight);
+    CGRect toolbarFrame = CGRectMake(0.0, appFrame.size.height - toolbarHeight, appFrame.size.width, toolbarHeight);
     //    NSLog(@"frame %@", NSStringFromCGRect(frame));
     [bottomToolbar setFrame:toolbarFrame];
     [bottomToolbar setNeedsLayout];
