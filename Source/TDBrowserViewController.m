@@ -302,14 +302,15 @@
 - (void)updateToolbarFrame {
     CGRect appFrame = [[UIScreen mainScreen] bounds];
     //    NSLog(@"appFrame %@", NSStringFromCGRect(appFrame));
-    UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
-    CGFloat toolbarHeight = 0;
-    if (UIInterfaceOrientationIsLandscape(o)) {
+    
+    CGFloat toolbarHeight = defaultNavBarHeight;
+    
+    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
+    if (UIInterfaceOrientationIsLandscape(orient)) {
         appFrame = CGRectMake(appFrame.origin.y, appFrame.origin.x, appFrame.size.height, appFrame.size.width);
         toolbarHeight = LANDSCAPE_NAVBAR_HEIGHT;
-    } else {
-        toolbarHeight = defaultNavBarHeight;
     }
+
     CGRect toolbarFrame = CGRectMake(0, appFrame.size.height - toolbarHeight, appFrame.size.width, toolbarHeight);
     //    NSLog(@"frame %@", NSStringFromCGRect(frame));
     [bottomToolbar setFrame:toolbarFrame];
