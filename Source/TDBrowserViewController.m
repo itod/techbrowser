@@ -110,12 +110,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateToolbarFrame];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self updateToolbarFrame];
 }
 
 
@@ -301,23 +301,26 @@
 
 - (void)updateToolbarFrame {
     CGRect appFrame = [[UIScreen mainScreen] bounds];
-    //    NSLog(@"appFrame %@", NSStringFromCGRect(appFrame));
-    
     CGFloat toolbarHeight = defaultNavBarHeight;
-    
+    CGFloat minY = CGRectGetMaxY([[UIApplication sharedApplication] statusBarFrame]);
+
+    // TOOLBAR
     UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
     if (UIInterfaceOrientationIsLandscape(orient)) {
-        appFrame = CGRectMake(appFrame.origin.y, appFrame.origin.x, appFrame.size.height, appFrame.size.width);
+        //appFrame = CGRectMake(appFrame.origin.y, appFrame.origin.x, appFrame.size.height, appFrame.size.width);
         toolbarHeight = LANDSCAPE_NAVBAR_HEIGHT;
     }
 
-    CGRect toolbarFrame = CGRectMake(0.0, appFrame.size.height - toolbarHeight, appFrame.size.width, toolbarHeight);
-    //    NSLog(@"frame %@", NSStringFromCGRect(frame));
+    CGRect toolbarFrame = CGRectMake(0.0, CGRectGetHeight(appFrame)-toolbarHeight, CGRectGetWidth(appFrame), toolbarHeight);
     [bottomToolbar setFrame:toolbarFrame];
     [bottomToolbar setNeedsLayout];
     
-    CGRect webFrame = [webView frame];
-    webFrame.size.height = appFrame.size.height - defaultNavBarHeight - toolbarHeight;
+    // NAVBAR
+    CGRect navBarFrame = CGRectMake(0.0, minY, CGRectGetWidth(appFrame), defaultNavBarHeight);
+    [navBar setFrame:navBarFrame];
+    
+    // WEBVIEW
+    CGRect webFrame = CGRectMake(0.0, minY + defaultNavBarHeight, CGRectGetWidth(appFrame), CGRectGetHeight(appFrame)-defaultNavBarHeight-toolbarHeight);
     [webView setFrame:webFrame];
 }
 
@@ -367,6 +370,15 @@
 #pragma mark Notifications
 
 - (void)interfaceOrientationDidChange:(NSNotification *)n {
+    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
+
+    BOOL statusBarHidden = NO;
+    if (UIDeviceOrientationIsValidInterfaceOrientation(orient) && UIInterfaceOrientationIsLandscape(orient)) {
+        statusBarHidden = YES;
+    }
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:statusBarHidden];
+    
     [self updateToolbarFrame];
 }
 
