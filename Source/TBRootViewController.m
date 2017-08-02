@@ -166,7 +166,12 @@
 
 
 - (void)updateToolbarFrame {
+    CGRect appFrame = [[UIScreen mainScreen] bounds];
+    CGFloat minY = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
     
+    // WEBVIEW
+    CGRect webFrame = CGRectMake(0.0, minY, CGRectGetWidth(appFrame), CGRectGetHeight(appFrame));
+    [webView setFrame:webFrame];
 }
 
 
@@ -265,6 +270,7 @@
 #pragma mark Notifications
 
 - (void)interfaceOrientationDidChange:(NSNotification *)n {
+    [self updateToolbarFrame];
     [self updateBigSpinnerFrame];
 }
 

@@ -130,6 +130,18 @@
 }
 
 
+- (BOOL)prefersStatusBarHidden {
+    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    BOOL statusBarHidden = NO;
+    if (UIDeviceOrientationIsValidInterfaceOrientation(orient) && UIInterfaceOrientationIsLandscape(orient)) {
+        statusBarHidden = YES;
+    }
+    
+    return statusBarHidden;
+}
+
+
 #pragma mark -
 #pragma mark Actions
 
@@ -363,18 +375,6 @@
     [self updateTitle];
     [self updateToolbarItems];
     [self showActivityStopped];
-}
-
-
-- (BOOL)prefersStatusBarHidden {
-    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
-    
-    BOOL statusBarHidden = NO;
-    if (UIDeviceOrientationIsValidInterfaceOrientation(orient) && UIInterfaceOrientationIsLandscape(orient)) {
-        statusBarHidden = YES;
-    }
-    
-    return statusBarHidden;
 }
 
 
