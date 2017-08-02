@@ -366,19 +366,22 @@
 }
 
 
-#pragma mark -
-#pragma mark Notifications
-
-- (void)interfaceOrientationDidChange:(NSNotification *)n {
+- (BOOL)prefersStatusBarHidden {
     UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
-
+    
     BOOL statusBarHidden = NO;
     if (UIDeviceOrientationIsValidInterfaceOrientation(orient) && UIInterfaceOrientationIsLandscape(orient)) {
         statusBarHidden = YES;
     }
     
-    [[UIApplication sharedApplication] setStatusBarHidden:statusBarHidden];
-    
+    return statusBarHidden;
+}
+
+
+#pragma mark -
+#pragma mark Notifications
+
+- (void)interfaceOrientationDidChange:(NSNotification *)n {
     [self updateToolbarFrame];
 }
 
