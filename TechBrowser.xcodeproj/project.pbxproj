@@ -156,7 +156,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				D37C64DC1F9119C1000CA424 /* Default-568h@2x.png */,
 				D3AFDCBF10B8F5BE007E6BBA /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* TechBrowser */,
@@ -248,6 +247,7 @@
 		D3AFDDD210B915C0007E6BBA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D37C64DC1F9119C1000CA424 /* Default-568h@2x.png */,
 				D3BE51B913A9187500CD53E5 /* Icon-Large.png */,
 				D3BE51BB13A9B4B100CD53E5 /* iTunesArtwork.png */,
 			);
