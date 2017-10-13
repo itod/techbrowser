@@ -179,7 +179,7 @@
 #pragma mark UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)wv shouldStartLoadWithRequest:(NSURLRequest *)req navigationType:(UIWebViewNavigationType)type {
-    if (UIWebViewNavigationTypeReload == type) {
+    if (UIWebViewNavigationTypeReload == type || UIWebViewNavigationTypeOther == type) {
         return YES;
     }
     
