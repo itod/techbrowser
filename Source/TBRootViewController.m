@@ -63,6 +63,7 @@
     }
     
     [self setUpNavBar];
+    [self setUpBigSpinner];
 
     //    [self showReloadBarItem];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:rootURLString]]];
@@ -77,7 +78,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self setUpBigSpinner];
+    [self updateBigSpinnerFrame];
 }
 
 
@@ -241,7 +242,6 @@
     self.bigSpinner = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
     [bigSpinner sizeToFit];
     [self.view addSubview:bigSpinner];
-    [self updateBigSpinnerFrame];
     [bigSpinner startAnimating];
 }
 
