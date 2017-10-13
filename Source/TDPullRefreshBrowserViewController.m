@@ -67,10 +67,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpScrollBar];
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
     [self setUpPullToRefreshHeader];
 }
 

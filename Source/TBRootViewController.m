@@ -240,13 +240,12 @@
 - (void)setUpBigSpinner {
     //[self.refreshArrow setHidden:YES];
     self.bigSpinner = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
-    [bigSpinner sizeToFit];
     [self.view addSubview:bigSpinner];
-    [bigSpinner startAnimating];
 }
 
 
 - (void)updateBigSpinnerFrame {
+    [bigSpinner sizeToFit];
     //CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGRect viewBounds = [self.view bounds];
     CGSize spinnerSize = [bigSpinner bounds].size;
@@ -256,6 +255,7 @@
                                      spinnerSize.width, spinnerSize.height);
 
     [bigSpinner setFrame:spinnerFrame];
+    [bigSpinner startAnimating];
 }
 
 
