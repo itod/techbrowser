@@ -50,6 +50,7 @@
 		D372A83616586231005C2FED /* TDHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = D372A83416586231005C2FED /* TDHintView.m */; };
 		D375B5D417F4B6AC0046FAAD /* TDBrowserNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D375B5D317F4B6AC0046FAAD /* TDBrowserNavBar.m */; };
 		D375B5D517F4B8DC0046FAAD /* TDBrowserNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D375B5D317F4B6AC0046FAAD /* TDBrowserNavBar.m */; };
+		D37C64DD1F9119C1000CA424 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D37C64DC1F9119C1000CA424 /* Default-568h@2x.png */; };
 		D39AD0611F2D044100DB683B /* TechBrowser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39AD0601F2D044100DB683B /* TechBrowser.xcassets */; };
 		D3AFDCC210B8F5BE007E6BBA /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDCC110B8F5BE007E6BBA /* TBAppDelegate.m */; };
 		D3AFDCD110B8F61E007E6BBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AFDCD010B8F61E007E6BBA /* main.m */; };
@@ -90,6 +91,7 @@
 		D372A83416586231005C2FED /* TDHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHintView.m; sourceTree = "<group>"; };
 		D375B5D217F4B6AC0046FAAD /* TDBrowserNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBrowserNavBar.h; sourceTree = "<group>"; };
 		D375B5D317F4B6AC0046FAAD /* TDBrowserNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBrowserNavBar.m; sourceTree = "<group>"; };
+		D37C64DC1F9119C1000CA424 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D39AD0601F2D044100DB683B /* TechBrowser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TechBrowser.xcassets; sourceTree = "<group>"; };
 		D3A60C2115256BD300BE5F75 /* FUWildcardPattern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUWildcardPattern.h; sourceTree = "<group>"; };
 		D3A60C2215256BD300BE5F75 /* FUWildcardPattern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FUWildcardPattern.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D37C64DC1F9119C1000CA424 /* Default-568h@2x.png */,
 				D3AFDCBF10B8F5BE007E6BBA /* Source */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* TechBrowser */,
@@ -358,6 +361,7 @@
 				D34359AD152570C000F9E581 /* iTunesArtwork.png in Resources */,
 				D34359D41525746600F9E581 /* BrowserView.xib in Resources */,
 				D34359D61525746600F9E581 /* InfoPlist.strings in Resources */,
+				D37C64DD1F9119C1000CA424 /* Default-568h@2x.png in Resources */,
 				D34359D81525746600F9E581 /* MainWindow.xib in Resources */,
 				D34359DA1525746600F9E581 /* RootView.xib in Resources */,
 			);
