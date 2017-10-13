@@ -31,6 +31,7 @@
 #import "TDPullRefreshBrowserViewController.h"
 
 #define REFRESH_HEADER_HEIGHT 52.0
+#define SPINNER_SIZE 20.0
 
 @interface TDPullRefreshBrowserViewController ()
 - (void)setUpPullToRefreshHeader;
@@ -66,18 +67,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpScrollBar];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
     [self setUpPullToRefreshHeader];
 }
 
 
 - (void)setUpPullToRefreshHeader {
-    CGFloat w = CGRectGetMaxX([[UIScreen mainScreen] bounds]);
-    
-    self.refreshHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, -REFRESH_HEADER_HEIGHT, w, REFRESH_HEADER_HEIGHT)] autorelease];
+    self.scrollView.contentInset = UIEdgeInsetsMake(-[[UIApplication sharedApplication] statusBarFrame].size.height, 0.0, 0.0, 0.0);
+    CGSize size = self.scrollView.contentSize;
+
+    self.refreshHeaderView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, -REFRESH_HEADER_HEIGHT, size.width, REFRESH_HEADER_HEIGHT)] autorelease];
     refreshHeaderView.backgroundColor = [UIColor clearColor];
     refreshHeaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-    self.refreshLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, w, REFRESH_HEADER_HEIGHT)] autorelease];
+    self.refreshLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, size.width, REFRESH_HEADER_HEIGHT)] autorelease];
     //    refreshLabel.backgroundColor = [UIColor blueColor];
     refreshLabel.textColor = [UIColor colorWithRed:31.0/255.0 green:76.0/255.0 blue:99.0/255.0 alpha:1.0];
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
@@ -101,7 +107,6 @@
     //    [self.tableView addSubview:refreshHeaderView];
     [self.scrollView addSubview:refreshHeaderView];
     
-    self.scrollView.contentInset = UIEdgeInsetsMake(-[[UIApplication sharedApplication] statusBarFrame].size.height, 0.0, 0.0, 0.0);
 }
 
 

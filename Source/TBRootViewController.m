@@ -62,7 +62,6 @@
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     }
     
-    [self setUpBigSpinner];
     [self setUpNavBar];
 
     //    [self showReloadBarItem];
@@ -78,6 +77,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self setUpBigSpinner];
 }
 
 
@@ -247,14 +247,14 @@
 
 
 - (void)updateBigSpinnerFrame {
-    CGRect viewFrame = [self.view frame];
-    CGRect spinnerFrame = [bigSpinner frame];
-    
-    spinnerFrame = CGRectMake(viewFrame.size.width / 2 - spinnerFrame.size.width / 2,
-                              viewFrame.size.height / 2 - spinnerFrame.size.height / 2,
-                              spinnerFrame.size.width,
-                              spinnerFrame.size.height);
-    
+    //CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGRect viewBounds = [self.view bounds];
+    CGSize spinnerSize = [bigSpinner bounds].size;
+
+    CGRect spinnerFrame = CGRectMake(round(viewBounds.size.width*0.5 - spinnerSize.width*0.5),
+                                     round(viewBounds.size.height*0.5 - spinnerSize.height*0.5),
+                                     spinnerSize.width, spinnerSize.height);
+
     [bigSpinner setFrame:spinnerFrame];
 }
 
