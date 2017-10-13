@@ -272,6 +272,11 @@
 - (void)interfaceOrientationDidChange:(NSNotification *)n {
     [self updateToolbarFrame];
     [self updateBigSpinnerFrame];
+    
+    UIInterfaceOrientation orient = [[UIApplication sharedApplication] statusBarOrientation];
+    if (UIDeviceOrientationIsValidInterfaceOrientation(orient) && UIInterfaceOrientationIsPortrait(orient)) {
+        [webView reload];
+    }
 }
 
 
