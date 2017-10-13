@@ -311,8 +311,22 @@
 }
 
 
+- (void)safeAreaInsetsDidChange {
+    [self updateToolbarFrame];
+}
+
+
 - (void)updateToolbarFrame {
     CGRect appFrame = [[UIScreen mainScreen] bounds];
+    
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        insets = self.view.safeAreaInsets;
+        insets.top = 0.0;
+    }
+    
+    appFrame = UIEdgeInsetsInsetRect(appFrame, insets);
+
     CGFloat toolbarHeight = defaultNavBarHeight;
     CGFloat minY = CGRectGetMaxY([[UIApplication sharedApplication] statusBarFrame]);
 
